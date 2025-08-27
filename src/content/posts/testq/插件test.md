@@ -1,12 +1,7 @@
 ---
-category: test111
+category: testq
 description: ""
 published: 2025-08-27
-tags:
-- a
-- b
-- c
-- d
 title: 插件test
 ---
 
