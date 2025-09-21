@@ -539,6 +539,9 @@ void btea(uint32_t *v, int n, uint32_t const key[4])
   }
 }
 ```
+## 密文？？？
+没找到密文check的地方，只找到了一个类似密文的东西，最后发现确实就是他
+![image](./assets/image-20250921230015-iy67ddi.png)
 # 2.解密
 ```c
 #include <stdio.h>
