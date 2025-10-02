@@ -1,7 +1,7 @@
 ---
 category: CTF
 description: " "
-published: 2025-09-21
+published: 2025-09-22
 title: WMCTF2025 Want2BecomeMagicalGirl
 ---
 
