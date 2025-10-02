@@ -1,0 +1,27 @@
+diff --git a/dist/assets/utils/transformToPath.js b/dist/assets/utils/transformToPath.js
+index cca8548dec42090b0621d1f21c86f503d5bba1be..3ace3912ef1758505adbedbbe430ab3832d9882c 100644
+--- a/dist/assets/utils/transformToPath.js
++++ b/dist/assets/utils/transformToPath.js
+@@ -13,7 +13,8 @@ function propsToFilename(filePath, transform, hash) {
+   }
+   const prefixDirname = isESMImportedImage(transform.src) ? dirname(filePath) : "";
+   let outputExt = transform.format ? `.${transform.format}` : ext;
+-  return decodeURIComponent(`${prefixDirname}/${filename}_${hash}${outputExt}`);
++  // Force disable image optimization - return original path without hash and format conversion
++  return decodeURIComponent(`${prefixDirname}/${filename}${ext}`);
+ }
+ function hashTransform(transform, imageService, propertiesToHash) {
+   const hashFields = propertiesToHash.reduce(
+diff --git a/dist/core/build/generate.js b/dist/core/build/generate.js
+index 4f6fd307118dae7af72ee7fdd747a623dfd7e1ae..c114177b65c5c2bb04505ca1efbea55b23d4c723 100644
+--- a/dist/core/build/generate.js
++++ b/dist/core/build/generate.js
+@@ -103,7 +103,7 @@ ${bgGreen(black(` ${verb} static routes `))}`);
+ `)
+   );
+   const staticImageList = getStaticImageList();
+-  if (staticImageList.size) {
++  if (false) {
+     logger.info("SKIP_FORMAT", `${bgGreen(black(` generating optimized images `))}`);
+     const totalCount = Array.from(staticImageList.values()).map((x) => x.transforms.size).reduce((a, b) => a + b, 0);
+     const cpuCount = os.cpus().length;
