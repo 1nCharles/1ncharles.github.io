@@ -5,6 +5,7 @@ published: 2025-12-07
 title: MiniVNCTF
 ---
 
+考察了基础的安卓逆向流程以及普通的xtea魔改
 # ezAndroid
 jadx打开程序，定位到Mainactivity直接来看程序流程
 ![image](./assets/image-20251207105222-qamifjr.png)
