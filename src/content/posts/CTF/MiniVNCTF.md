@@ -1,9 +1,7 @@
 ---
-category: 
+category: CTF
 description: " "
 published: 2025-12-07
-tags:
-- CTF
 title: MiniVNCTF
 ---
 
