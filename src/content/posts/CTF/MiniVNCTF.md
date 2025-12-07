@@ -5,7 +5,7 @@ published: 2025-12-07
 title: MiniVNCTF
 ---
 
-考察了基础的安卓逆向流程以及普通的xtea魔改
+考察了基础的安卓逆向流程以及普通的xtea魔改，难度为简单
 # ezAndroid
 jadx打开程序，定位到Mainactivity直接来看程序流程
 ![image](./assets/image-20251207105222-qamifjr.png)
@@ -30,6 +30,7 @@ check2是native函数，在so中实现，找到对应函数
 delta由全局变量存储，查找引用发现还有一个函数使用了delta
 ![image](./assets/image-20251207112441-4bnlmzt.png)
 ![image](./assets/image-20251207112517-wds3bwj.png)
+
 这个函数偷偷修改了delta的值
 那为什么这个函数会被执行呢？
 ![image](./assets/image-20251207112918-lk42jwe.png)
