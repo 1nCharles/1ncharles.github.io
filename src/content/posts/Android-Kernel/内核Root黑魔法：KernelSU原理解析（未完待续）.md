@@ -1,7 +1,7 @@
 ---
 category: Android Kernel
 description: " "
-published: 2025-12-07
+published: 2025-12-08
 title: 内核Root黑魔法：KernelSU原理解析（未完待续）
 ---
 
