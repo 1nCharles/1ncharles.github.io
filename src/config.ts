@@ -92,6 +92,6 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 
 export const commentConfig: CommentConfig = {
   twikoo: {
-    envId: 'twikoo.britn3y.top',
+    envId: 'https://twikoo.britn3y.top',
   },
 }
