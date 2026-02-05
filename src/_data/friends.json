@@ -1,8 +1,32 @@
 [
 	{
-		"siteTitle": "Lorem Ipsum",
-		"siteDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"siteUrl": "https://github.com/saicaca/fuwari/",
-		"siteIcon": "https://raw.githubusercontent.com/saicaca/fuwari/refs/heads/main/src/assets/images/demo-avatar.png"
+		"siteTitle": "Liv",
+		"siteDesc": "Re | W&M",
+		"siteUrl": "https://tkazer.github.io/",
+		"siteIcon": "https://tkazer.github.io/img/butterfly-icon.png"
+	},
+    {
+		"siteTitle": "Y&Y",
+		"siteDesc": "Re | V&N",
+		"siteUrl": "https://singlehorn.github.io/",
+		"siteIcon": "https://singlehorn.github.io/images/avatar.jpg"
+	},
+    {
+		"siteTitle": "Hurkin",
+		"siteDesc": "Misc | V&N",
+		"siteUrl": "https://www.hurkin.top/",
+		"siteIcon": "https://www.hurkin.top/wp-content/uploads/2025/02/%E5%8F%8B%E5%88%A9%E5%A5%88%E7%BB%AA1.jpg"
+	},
+    {
+		"siteTitle": "LamentXU",
+		"siteDesc": "Web | W&M",
+		"siteUrl": "https://www.cnblogs.com/LAMENTXU",
+		"siteIcon": "https://avatars.githubusercontent.com/u/108666168?v=4"
+	},
+    {
+		"siteTitle": "PangBai",
+		"siteDesc": "Re | W&M",
+		"siteUrl": "https://pangbai.work/",
+		"siteIcon": "https://pangbai.work/images/avatar.jpg"
 	}
 ]
