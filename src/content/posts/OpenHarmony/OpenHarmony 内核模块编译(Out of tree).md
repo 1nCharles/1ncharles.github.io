@@ -84,10 +84,6 @@ export OHOS_BUILD_HOME="/path/to/OpenHarmonySource"
 
 否则 `kernel.mk`​ 中的 `OHOS_BUILD_HOME` 将会是错误的路径
 
-并且要修改`kernel.mk`​, 在`$(hide) $(KERNEL_MAKE) -C $(KERNEL_SRC_TMP_PATH) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) modules_prepare` 下方添加
-
-![image](assets/image-20260221002710-yrvucg9.png)
-
 ![image](assets/image-20260220231518-q4bckuz.png)
 
 编译完成后的输出目录中的结构为
