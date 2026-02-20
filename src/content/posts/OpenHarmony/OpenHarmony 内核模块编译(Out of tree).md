@@ -66,8 +66,8 @@ build/prebuilts_download.py
 给个传参的示例
 
 ```shell
-export OHOS_BUILD_HOME="~/Desktop/op"
-kernel/linux/build/build_kernel.sh ${OHOS_BUILD_HOME}/kernel/linux/build  ${OHOS_BUILD_HOME}/out/ ${OHOS_BUILD_HOME}/out/images standard x86 vendor/ohemu/qemu_x86_64_linux_min qemu-x86_64-linux linux-5.10
+export OHOS_BUILD_HOME="/path/to/OpenHarmonySource"
+./build_kernel.sh ${OHOS_BUILD_HOME}/kernel/linux/build  ${OHOS_BUILD_HOME}/out/ ${OHOS_BUILD_HOME}/out/images standard x86 vendor/ohemu/qemu_x86_64_linux_min qemu-x86_64-linux linux-5.10
 ```
 
 这里需要注意的是 `device_name`​ 要与 `defconfig` 的文件名中的相同
@@ -83,6 +83,10 @@ kernel/linux/build/build_kernel.sh ${OHOS_BUILD_HOME}/kernel/linux/build  ${OHOS
 ![image](assets/image-20260220225739-tig07m3.png)
 
 否则 `kernel.mk`​ 中的 `OHOS_BUILD_HOME` 将会是错误的路径
+
+并且要修改`kernel.mk`​, 在`$(hide) $(KERNEL_MAKE) -C $(KERNEL_SRC_TMP_PATH) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) modules_prepare` 下方添加
+
+![image](assets/image-20260221002710-yrvucg9.png)
 
 ![image](assets/image-20260220231518-q4bckuz.png)
 
