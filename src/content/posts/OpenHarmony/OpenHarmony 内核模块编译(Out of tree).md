@@ -174,7 +174,8 @@ OBJ才是编译产物
 envset.sh
 
 ```shell
-export KDIR=~/Desktop/op/out/kernel/OBJ/linux-5.10
+export KDIR=~/Desktop/op/out/kernel/src_tmp/linux-5.10
+export ODIR=~/Desktop/op/out/kernel/OBJ/linux-5.10
 export CLANG_PATH=~/Desktop/op/prebuilts/clang/ohos/linux-x86_64/llvm/bin
 
 export PATH=$CLANG_PATH:$PATH
@@ -182,6 +183,7 @@ export CROSS_COMPILE=x86_64-unknown-linux-ohos-
 export ARCH=x86_64
 export LLVM=1
 export LLVM_IAS=1
+
 ```
 
 Makefile
@@ -199,17 +201,20 @@ ccflags-y += -Wno-unused-function
 ccflags-y += -Wno-builtin-macro-redefined -U__FILE__ -D__FILE__='""'
 
 KDIR := $(KDIR)
+ODIR := $(ODIR)
 MDIR := $(realpath $(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 
 $(info -- KDIR: $(KDIR))
+$(info -- ODIR: $(ODIR))
 $(info -- MDIR: $(MDIR))
 
 all:
-	make -C $(KDIR) M=$(MDIR) modules
+	make -C $(KDIR) O=$(ODIR) M=$(MDIR) modules
 compdb:
 	python3 $(MDIR)/.vscode/generate_compdb.py -O $(KDIR) $(MDIR)
 clean:
-	make -C $(KDIR) M=$(MDIR) clean
+	make -C $(KDIR) O=$(ODIR) M=$(MDIR) clean
+
 ```
 
 经过测试可以正常在DevEco的模拟器上运行（root且关闭SELinux条件下）
